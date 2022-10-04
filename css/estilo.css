@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image:  linear-gradient(#303536, #3a4a5f, #3d5574, #1c4f92),url("img/logo2.jpg"); 
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    gap: 0px;
+   /* background-color: #2c3129;*/
+    padding: 0;
+    grid-template-columns: 0.4fr 1.5fr 1.1fr;
+    grid-template-rows: 0.1fr 2.7fr 0.3fr;
+    grid-template-areas:
+        'navbar navbar navbar'
+        'section section section'
+        'footer footer footer' ;
+}
+
+.grid-container > div {
+    
+    text-align: center;
+    padding: 0;
+  }
+.navbar{
+    grid-area: navbar;
+    flex-direction: row;
+}
+
+.sidebar {
+    /*background-color:#3b3636;*/
+    background-color:rgba(9, 10, 14, 0.479); 
+    grid-area: sidebar;
+
+  }
+.section{
+   /* background-color:#727272; */
+    grid-area: section;
+    color:aliceblue;
+
+}
+.formulario label{
+  text-align: center;
+}
+.formulario input{
+  text-align: center;
+}
+.formulario p{
+  font-weight: 800;
+ }
+.footer{
+   background-color:rgba(252, 252, 252, 0.178); 
+    grid-area: footer;
+    color: azure;
+}
+    
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgba(241, 241, 241, 0); 
+  }
+  
+
+  
+  ul.topnav li a {
+
+    display: block;
+    color: rgb(212, 212, 212);
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .logo-nav{
+    width: 50px;
+    padding: 2px 2px;
+    float:left;
+  }
+  .menu-nav{
+    padding: 16px 20px;
+    float: right;
+    font-weight: 600;
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color: rgba(76, 136, 91, 0.829);}
+  
+  
+  ul.topnav li.right {float: right;}
+  
+  @media screen and (max-width: 600px) {
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+  }
